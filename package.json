@@ -1,0 +1,17 @@
+{
+  "name": "login-keycloak",
+  "version": "1.0.0",
+  "description": "pacote para autenticação usando keycloak e angular 17 como base inicial",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:keycloak": "docker compose --project-directory ./ up",
+    "start:front": "cd ./front-login && ng serve",
+    "start": "concurrently \"npm run start:keycloak\" \"npm run start:front\"" 
+  },
+  "author": "Leandro Marques <leandro1992@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
