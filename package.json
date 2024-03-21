@@ -6,6 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start:keycloak": "docker compose --project-directory ./ up",
+    "configure:front": "cd ./front-login && npm i",
+    "build:front": "cd ./front-login && npm run build",
     "start:front": "cd ./front-login && ng serve",
     "start": "concurrently \"npm run start:keycloak\" \"npm run start:front\"" 
   },
